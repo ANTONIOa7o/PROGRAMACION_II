@@ -1,0 +1,19 @@
+.swal-overlay{/*Fondo*/
+    background-color: rgb(203, 241, 233);
+
+}
+.swal-modal{/*Ventana*/
+    border: 3rem
+}
+.swal-footer{
+    background-color: whitesmoke;
+    margin-top: 3rem;
+    border-top: 1px solid #E6EEF1;
+}
+h2{
+    color: red;
+    text-shadow: 2px 2px 2px silver;
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: sans-serif;
+}

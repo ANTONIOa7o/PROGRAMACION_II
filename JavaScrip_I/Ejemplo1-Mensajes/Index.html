@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensajes</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!--
+------------------------JavaScript---------------------
+Partiendo de que es un lenguaje de programacion para añadir
+interactividad, que no necesita, ningun tipo de compilacion.
+Fundamentos:
+1. Interpretado y Orientado a Objetos
+2. Debilmente tipado
+3.Parte inicialmente de una especificacion de ECMAscripts6
+4.Sintaxis similar C y convenciones similares de codificacion con JAVA,aunque 
+sin relacionar en un inicio.
+5.Uso principal esta en el lado Cliente(Navegadores),pero ya existe opciones del lado 
+del serividor
+6. Debilidad en las grafias.
+7.Sintasix:
+        <script>
+            alert("texto")
+        </script>
+
+    -->
+    <script>
+       /*  alert("Bienvenido a mi primer Scripts") */
+       /*
+       Console(log); 
+       Sintaxis:
+       console.log(objeto);
+       Es un metodo que nos mostrará un mensaje con el contenido en consola
+       recibe como argumento uno o mas objetos. Cada objeto se evalua y concatena en un 
+       string separados por espacios
+       console.log(3+5);*/
+    
+       swal({
+           
+           title:"Bienvenido a mi primer Mensaje Script con SweetAlert",
+           text:"Presiona para Salir",
+           icon:"success",
+           button:"Gracias!",
+        });
+        document.write("<h2>Hola desde mi pagina JS</h2>"); 
+        </script>
+    <!--
+        Configuarion del Alert-------
+        https://sweetalert.js.org/guides
+        1.Instalaremso sus librerias, que dan los estilos a los alert.
+        $npm install sweetalert --save
+        2.Inyectamos la librerias
+
+    -->
+</body>
+</html>
