@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Ejercicio Aritmetica</title>
+</head>
+<body>
+    <h2>Ejercicio: El usuario introduce dos numeros, en el cual aparezca
+        la suma de ambos numeros.
+    </h2>
+    <script>
+        alert("Calculadora, introduce dos numeros");
+        var dato1 = window.prompt("Introducir un numero entero");
+        var numero1=parseInt(dato1)
+       /*  var dato2 = window.prompt("Introduce tu segundo numero")
+        var numero2=parseInt(dato2) */
+        var numero2=parseInt(window.prompt("Introduce tu segundo numero"));
+
+        console.log(numero1+"+"+ numero2+"="+(numero1+numero2));
+        
+        document.write(numero1+"+"+ numero2+"="+(numero1+numero2)+"<br>");
+        document.write(numero1+"-"+ numero2+"="+(numero1-numero2)+"<br>");
+        document.write(numero1+"/"+ numero2+"="+(numero1/numero2)+"<br>");
+        document.write(numero1+"*"+ numero2+"="+(numero1*numero2));
+    </script>
+</body>
+</html>
