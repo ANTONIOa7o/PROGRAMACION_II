@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div align="center">
+        <button type="button" onclick="funcSaludar()" class=" btn btn-success btn-lg">Saludar</button>
+        <button type="button" onclick="funcDespedir()" class="btn btn-secondary btn-lg">Despedir</button>
+    </div>
+    <script>
+
+        /*
+        LAS FUNCIONES=>
+        
+            Conocidas o descritas como declaraciones de funcion o expresion de funcion
+            Declaracion Sintaxis:
+            1.Consta de la palabra clave function(funcion)
+            2. el nombre de la funcion
+            3. Lista de parametros que requiere la funcion, entre parentesis'()'' y
+             separado por ',''
+             4.Las declaraciones de JavaScript que vayan a definir la funcion, estará 
+             encerrada entre llaves '{}'
+             
+             
+        LAS VARIABLES=>
+        
+        **Las variables Globales:
+                Entendidas como aquellas variables a las cuales podemos acceder desde cualquier
+                punto de la pagina, donde reside el script
+                Condiciones:
+                1. Se tienen que declarar fuera de cualquier procedimiento, declaracion o expresion
+                o función definida.
+                2.Recomendacion, establecida solo se deberá utilizar cuando realmente exista la necesidad
+                de compartir informacion entre todas las partes declaradas del codigo de la pagina.
+            Sintaxis:
+            <script>
+                var total=0;                                [variable global]
+                function suma (a,b){                        [funcion nombre]+[(parámetros)]
+        
+                    total = (a+b)                           [Declaracion de JavaScript con los parametros]
+                }
+                suma(12,3)
+            <\script>
+        */
+        var nombre = window.prompt("Introduce tu nombre: ");
+
+        function funcSaludar() {
+            //variable local  
+            var apellido = "Cuadrado";
+            alert("Hola " + nombre + apellido + ".......");
+        }
+        /*
+        **Las Variables Locales:
+                Se definen indiscutiblemente dentro de la funcion, dejando de 'existir' al terminar 
+                la ejecución de la funcion, e.d: Una vez cerrado el funcionamiento o utilidad de la funcion
+                dichas variables son desalojadas de la memoria, por el propio motor del lenguaje.
+        
+        */
+
+        function funcDespedir() {
+            alert("Adios " + nombre + "!!!!!");
+        }
+    </script>
+</body>
+
+</html>
