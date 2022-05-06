@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparaciones, Operadores Logicos, relacionales y aritmeticos</title>
+</head>
+<body>
+    <!--
+                               a) Operadores Lógicos=>
+        Significado                   Operador            Descripcion
+        
+'y'[sentencia copulativa]               &&              Considera true(verdadera) si ambas sentencias lo son
+'o'[sentencia copulativa]               ||              Considera true(verdadera) si al menos una de las sentencias es verdadera
+'no' [negacion o su contrario]           !              Devuelve el valor contrario al operador asignado
+
+                              b) Operadores Relacionales=>
+       Significado                   Operador            Descripcion
+
+igual a                                 ==              Igualdad entre tipos de elementos comparados
+distinto de                             !=              Contrario al elemento comparado
+igualdad estricta                       ===             Igualdad entre tipos y valor de elementos comparados
+desiguldad estricta                     !==             Contrario al elemento comparado de forma estricta.
+mayor, mayor e igual                    >,>=            Comparacion de cantidad de valor mayor , mayor o igual
+menor, menor e igual                    <,<=            Comparacion de cantidad de valor menor, menor o igual
+
+                              c) Operadores Aritméticos
+    Significado                      Operador            Descripcion
+
+    Suma, resta                      ' +,- '              Adicion y sustracion
+    multiplicacion, division         ' *,/ '             producto y cociente
+    cambio de signo                    ' - '              cambio de negativo
+    Incremento                         ' ++ '                   incremento
+    Decremento                         ' -- '                   decremento
+    Resto                               %                   resto division
+    -->
+
+    <script>
+var numero=7;
+console.log("igualdad: "+ (numero==7));
+console.log("desigualdad: "+ (numero != 7));
+console.log("Mayor: "+(numero>7));
+console.log("Mayor o igual: "+(numero>=10));
+console.log("Menor: "+(numero<5))
+console.log("Menor o igual: "+(numero<=7));
+
+//Igualdad estricta
+console.log("Igualdad: "+(numero=="7"));
+console.log("Igualdad estricta: "+(numero==="7"));
+
+console.log("Desigualdad: "+(numero!="7"));
+console.log("Desigualdad estricta: "+(numero!=="7"));
+
+//Operadores Lógicos
+var nombre1="Juan";
+var nombre2="Pepa";
+console.log ( "Y Copulativa(v-v) : "+ ((nombre1=="Juan")&&(nombre2=="Pepaaaaaa")));
+console.log( "O Copulativa(v-f) : "+ ((nombre1=="Juan")||(nombre2=="Pepaaaaa")));
+console.log("No: "+ (!(nombre2=="Pepaaaaa")));
+console.log("No: "+ (!(nombre1=="Juan")));
+
+    </script>
+</body>
+</html>
