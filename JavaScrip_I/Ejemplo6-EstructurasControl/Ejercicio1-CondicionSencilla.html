@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTRUCTURA CONTROL</title>
+</head>
+
+<body>
+    <!--
+        ------------------ESTRUCTURAS DE CONTROL---------------
+    Permiten tomar decisiones o elecciones, en funcion de determinadas condiciones que
+inicialmente se plantean, para ejecutar uno u otro codigo o sentencia partiendo o segun
+indiquen dichas condiciones
+PRIMERO.
+        if else
+SEGUNDO
+        switch-case
+TERCERO
+        fOR
+CUARTO
+        for in
+QUINTO
+        while
+SEXTO
+        do while
+    
+PRIMERO=> if else
+            Sintaxis:
+
+            if(condicion){
+                codigo1-sentencia (Si es cierto);
+            }else{
+                codigo2-sentencia (Si es falso);
+            } 
+    [Comprueba la validez o falsedad de una condicion. Si dicha condicion es true, se ejectua el codigo
+    contendio en la primera sentencia. si fuera falso se interpretará el codigo2 del else]
+
+Ejemplo:
+    -->
+    <script>
+        var numero = 4;
+        if (numero >= 5) {
+            alert("Numero es mayor o igual a 5");//Al recorrer la sentencia interactua aquella que compare como verdadera
+        } else {
+            alert("Numero es menor que 5");
+        }
+
+        var numero2 = 2;
+        if (numero >= 5) {
+            alert("Numero es mayor o igual a 5");
+        } else
+            if (numero2 >= 5) {
+                alert("Numero 2 es mayor o igual a 5");
+            } else {
+                alert("Ambos numeros son menores que 5");
+            }
+    </script>
+</body>
+
+</html>
