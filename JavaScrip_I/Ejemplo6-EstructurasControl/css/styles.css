@@ -1,0 +1,15 @@
+.estructura{
+background-color: #cccccc;/*Color de fondo*/
+border-bottom: 5px solid #5ca86f;/*Grosor, estilo y color borde de linea inferior*/
+font: normal bold 18px;/*fuente, tipo grosor y tamaño*/
+color: green;/* color de la fuente*/
+letter-spacing: -2px;/*Espacio entre las letras, acepta valores negativos*/
+text-align: center;
+border-radius: 18px;/*Bordeado general con un solo valor, definido por 4 valores, de cada esquina del elemento*/
+box-shadow: 4px 0px 2px #5ca86f;/*Sombra en valor x, valor y , valor de dispersion*/
+}
+h3{
+color: green;    
+text-align: center;
+letter-spacing: -2px;
+}
