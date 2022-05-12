@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recorrido de Primos hasta el nº 100</title>
+</head>
+
+<body>
+    <!--
+Numero primo es un numero natural mayor que 1, que tiene unicamente dos divisores
+positivos distintos : el mismo y 1
+    -->
+    <script>
+        for (var numero = 1; numero <= 100; numero++) {
+            console.log("Comprobando numeros: " + numero + "--------");
+            var primo = true;
+            //Divisores posibles del numero
+            for (var divisor = 2; divisor < numero; divisor++) {
+                if (numero % divisor == 0) {
+                    var primo = false;
+                    //break;
+                    //continue
+                }
+                //Termina de comprobar los divisores
+            }
+            if (primo) {
+                document.write("el numero: " + numero + " es primo <br>");
+            }
+        }
+    </script>
+</body>
+
+</html>

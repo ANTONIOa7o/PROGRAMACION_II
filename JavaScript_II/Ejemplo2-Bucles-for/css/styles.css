@@ -1,0 +1,8 @@
+#resultado{
+    font-weight: bold;
+    letter-spacing: 6px;
+    background-color: aliceblue;
+    border-radius: 6px;
+    box-shadow: 6px 6px 10px aliceblue;
+    border: 1px solid black;
+}
