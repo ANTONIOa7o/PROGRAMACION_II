@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion a Switch Case</title>
+</head>
+
+<body>
+    <!--
+            ---------------------- SWITCH CASE----------------------
+        Como otra estructura control, se va a ejecutar desde el planteanimiento en cual se pueda dar 
+        el caso o la necesidad de tomar una decision, desde un contexto de multiples opciones o posibilidades.
+        Pero donde sólo una de estas opiciones o posibilidades podrá ser ejecutada en cada una de las ocasiones
+        generadas.
+        Sintaxis:
+            switch(elementos a evaluar){
+                case valor1:
+                codigos...;
+                break;(Cierra la operacion si es true, sino continua con los casos)
+                case valor2
+                codigo...;
+                break;
+                        .
+                        .
+                        .
+                        .
+                        .
+                        Se generaran tantos casos como opciones o posibilidades tengamos
+                default:
+                codigo por omision
+                break;
+            }
+
+            Ejemplo: Identificar a tráve de la introduccion de hombre o mujer respuesta de si eres hombre o mujer.
+    -->
+
+    <script>
+
+        var sexo = window.prompt("Elige hombre o mujer");
+
+
+        switch (sexo.toLocaleLowerCase()) { //Parseando referido cuando es sensible al string, y lo
+            // transformamos en minisculas
+            case "hombre":
+                alert("Eres un hombre");
+                break;
+            case "mujer":
+                alert("Eres una mujer");
+                break;
+            default:
+                alert("Vuelva a intentarlo o género desconocido");
+        }
+
+    </script>
+</body>
+
+</html>

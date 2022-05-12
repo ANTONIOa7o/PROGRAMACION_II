@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comportamiento bucle, en divisibles</title>
+</head>
+<body>
+    <h3>Localizar divisibles entres si del 1 al 20</h3>
+    <script>
+
+        for(var numero=1; numero<=20;numero++){
+document.write("Recorriendo y Probando el numero " + numero+"<br>");
+        for(var divisor=1;divisor<=numero;divisor++){
+            if( numero %divisor==0){ 
+                document.write("Es divisible por: " + divisor +" <br>");
+
+            }
+        }
+        document.write("----------------------------------" +"<br>");
+
+
+
+        }
+    </script>
+</body>
+</html>

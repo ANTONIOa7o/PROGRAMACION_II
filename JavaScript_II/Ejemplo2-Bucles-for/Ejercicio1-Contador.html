@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<body>
+    <!--
+        ---------------ESTRUCTURAS DE CONTROL--------------
+        for=>
+        Es la necesidad de tener una estructura de contador. Desde el planteamiento
+        de poder recorrer determinadas estructuras, con elementos,(MATRICES-Arrays) y
+        su analogía con otros lenguajes.
+    
+    Sintaxis:
+
+        for(contador=valor inicial; *condicion del bucle;[procedimiento: incremento, decremento....] ){
+
+            cuerpo del bucle;
+        }
+    
+    *Expresion que nos indicará, si el cuerpo del bucle se debe ejecutar. Mientras esa condicion sea true!!!!
+    Cuando la estructura del bucle sea false, se detendrá
+    ** Es una estructura tipica de anidación en otras estructuras de control
+    -->
+    <h3>Ejemplo1: Mostrar los numeros del 1 al 10</h3>
+    <script>
+        for(var i=1;i<=10; i++){
+            console.log(i);
+            document.write(i);
+
+        }
+        /*
+        Buscar múltipos de 5, hasta el nº 50
+        1.Recorremos
+        2.Buscamos los multiplos
+        */
+
+            var pili;
+            
+        for(var pili =1;pili<=50;pili++){//Estructurado el recorrido del 1 al 50
+            if(pili % 5 == 0){
+                document.write(pili + " ");
+            }
+
+        }
+
+    </script>
+</body>
+</html>

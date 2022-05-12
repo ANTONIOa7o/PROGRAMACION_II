@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú del dia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <script>
+        function presiona() {
+
+            var fecha = new Date();
+            //var dia = fecha.getDay();
+            var menu = "";
+
+            switch (dia=fecha.getDay()) {
+                case 0:
+                    menu = "Codido Madrileño";
+                    break;
+                case 1:
+                    menu = "Cerrado";
+                    break;
+                case 2:
+                    menu = "Macarrones a la Boloñesa";
+                    break;
+                case 3:
+                    menu = "Tofu con zanahorias";
+                    break;
+                case 4:
+                    menu = "Merzula a la bilbaína";
+                    break;
+                case 5:
+                    menu="Judiones con Chorizo";
+                    break;
+                case 6:
+                    menu="Esparragos con mahonesa";
+                    break;
+
+                default:
+                    menu="Error de conexion,volver a intetar "
+            }
+            document.getElementById('resultado').innerText =("El menu del dia es: "+ menu);
+
+
+        }
+    </script>
+    <div class="container" style="text-align:center; width: 380px;">
+        <h3>Menú del dia</h3>
+        <button onclick="presiona()" class="btn btn-success">Ver menú de hoy</button>
+        <div class="post-it" id="resultado"></div>
+    </div>
+    <style>
+        .post-it {
+            width: 15.62rem;
+            height: 15rem;
+            position: relative;
+            background-color: #ffa;
+            margin: 30px auto;
+            padding: 50px;
+            border-radius: 0 0 0 30px/45px;
+            box-shadow:
+                /* 
+            Inset cambia la sombra de proyeccion dentro del marco del elemento,e.d:
+            proyecta en el interior del borde x, y.
+            */
+                inset 0 -40px -40px rgb(0, 0, 0, 0.2),
+                inset 0 25px 10px rgb(0, 0, 0, 0.2),
+                0 5px 6px 5px rgb(0, 0, 0, 0.2);
+            font-family: 'Permanent Marker', cursive;
+            line-height: 1.7em;
+            font-size: 19px;
+        }
+
+        h3 {
+            color: green;
+            letter-spacing: -1px;
+            font-family: 'Permanent Marker', cursive;
+        }
+    </style>
+</body>
+
+</html>
