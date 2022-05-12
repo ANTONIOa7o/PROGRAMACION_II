@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero Perfecto</title>
+</head>
+
+<body>
+    <!--
+        Calcular el numero perfecto entendido como el numero que es igual
+        a la suma de sus dividendos
+        Ejemplo:Localizar los numeros perfectos del 1 al 100
+    -->
+    <script>
+
+        var numero = 1;
+        while (numero <= 100) {
+            var suma = 0;
+            for (var divisor = 1; divisor < numero; divisor++) {
+
+                if (numero % divisor == 0) {
+                    suma += divisor;
+                }
+
+            }
+            if (suma == numero) {
+                document.write("El número : " + numero + "Es Perfecto" + "<br>");
+            }
+            numero++;
+        }
+
+    </script>
+</body>
+
+</html>
