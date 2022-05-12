@@ -1,0 +1,30 @@
+h2{
+    text-align: center;
+    width: 200px;
+    color: white;
+    letter-spacing: 4px;
+    font-family: 'Ballo Tamma';
+    text-shadow: 
+    -1px -1px 5px #2196f3,
+    3px 3px 10px #2196f3,
+    6px 6px 10px #0d47a1
+    
+    ;
+    margin-top: 10px;
+
+}
+#cuadrado{
+    width: 30%;
+    height: 150px;
+    margin: 0 auto;
+    background-color: #2196f3;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 40px;
+}
+.sombra{
+    box-shadow: -1px -1px 5px #2196f3,
+    3px 3px 10px #2196f3,
+    6px 6px 10px #0d47a1
+    ;
+}
