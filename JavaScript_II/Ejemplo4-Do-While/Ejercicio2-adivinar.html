@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Adivina un numero</title>
+</head>
+
+<body>
+    <!--
+        Adivinar usuario numero entre el 1 y el 50, teniendo 6 intentos
+    -->
+    <script>
+        var numero = parseInt(Math.random() * 50);
+        console.log(numero);
+        var intentos = 6;
+        var adivina = 0;
+        
+        do {
+            adivina =parseInt(window.prompt("Prueba a adivinar un numero del 1 al 50"))
+            if (adivina>numero) {
+                alert("Te has pasado, te queda"+ (intentos--)+" intentos");
+            } else if(adivna<numero) {
+                alert("Te has quedado, corto "+ (intentos--)+ " intentos");
+            }
+        } while (adivina !=numero && intentos >0);
+        if (numero==adivina) {
+                alert("Enhorabuena!! has acertado");
+        } else {
+            alert("Lo sentimos se te han acabado los intentos");
+        }
+    </script>
+
+</body>
+
+</html>
