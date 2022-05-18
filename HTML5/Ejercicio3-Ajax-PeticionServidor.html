@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--
+        -------------AJAX-----------------
+        =>ASYCHRONOUS JAVASCRIPT AND XML, Seran el conjunto de Tecnologias qsue nos van a permitir hacer LLAMADAS
+        ,a servidores desde la estructura de JavaScript, en el entorno Cliente(Navegador), sin la necesidad de 
+        tener que por una lado actualizar la pagina o generar una actualización. Ademas, permite que en las aplicaciones
+        web, funciones de forma Asincrona, procesando cualquier solicitud al servidor en un segundo plano.
+    -->
+    <div id="resultado" class="container card text-white bg-warning mb-3" style="max-width: 18rem; margin-top: 15px;">
+        <div class="card-header" style="color:red;"><strong>BUSCAR POKEMONS</strong></div>
+        <div class="card-body">
+            <h5 class="card-title">Haya las caracteristicas principales de los Pokemons</h5>
+            <p class="card-text">Aparecerá el nombre, y su cualidades, tales como Altura, peso
+                y habilidad principal
+            </p>
+        </div>
+        <label>Nombre del Pokemon: </label>
+        <input type="text" id="nombre" name="nombre"/>
+        <button onblur="buscarPokemon()" type="button" class="btn btn-warning">Buscar</button>
+    </div>
+    <script>
+/*
+Objeto HMLHttpRequest(xhr), refenrenciada o encontrada en XMLHTTP, como interfaz se va usar como:
+        1.Realizar peticiones a Servidor web, desde una directiva 'open()'
+        2.Enviar peticiones, mediante una directiva send()
+        3. Recibir respuestas lo tendremos mendiante la propiedad responseText
+
+*/
+
+var xhr;
+
+        function buscarPokemon(){
+
+            //obtenemos el objectde xmlhttpRequest
+            //Obtener informacion 
+            xhr= new XMLHttpRequest();
+
+            //Recupera el valor del nombre, que introduzca el usuario
+            var dato = nombre.value
+
+            //abrir la petiion
+            xhr.open("GET","https://pokeapi.co/api/v2/pokemon/" + dato,true);//true=asincrono(?)*
+            //en la cabecera indico que la respuesta como la quiero?La quiero en formato json
+            xhr.setRequestHeader("accept","application/json");//(?)*
+            //Informamos de que función va a procesar la respuesta
+            xhr.onreadystatechange = procesarRespuesta;//Sin parentesis , presentando la referencia de la funcion
+            //enviar la peticion
+            xhr.send();
+        }
+        function procesarRespuesta(){
+            //solo se procesará la respuesta si hemos recibido correctamente y por completo
+            if(xhr.readyState == 4){    //solicitud finalizada == 4
+                var respuesta =JSON.parse(xhr.responseText); // JSON.parse(cadena)->Transforam de Json a Object de JavaScript.
+                console.log(respuesta);
+                document.getElementById('resultado').innerText=
+                "Nombre: "+ respuesta.name + "\n"+
+                "Altura " + respuesta.height + "\n"+
+                "Peso "   + respuesta.weight + "\n"+
+                "Habilidades " + "\n"
+
+            /*
+            
+            Sintasis:
+                    Asigna un nombre de propiedad                     Los objetos cuyas propiedades
+                    diferente a la variable                             queremos recorrer o enumerar
+                    en cada iteración
+            for(         variables                       in                  objeto          ){
+
+                sentencias o instrucciones
+            }
+        */
+              var habilidades =respuesta.abilities;
+              for ( var i in habilidades){
+                  document.getElementById('resultado').innerText+= habilidades[i].ability.name + "\n";
+              }  
+              
+            }
+            /*  En general, es recorrer por  las propiedades y los valores de un object de manera genérica. Y se ejecuta
+        una vez por cada una de las propiedades del objeto.
+        */
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
