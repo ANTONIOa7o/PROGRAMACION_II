@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionalidades Array</title>
+</head>
+
+<body>
+    <script>
+        var valores = [true, 5, false, "hola", 2, "adios"];
+
+        var arrayTexto = new Array();
+        var arrayNumero = new Array();
+        var arrayBolean = new Array();
+
+        for (var item of valores) {
+            //Metodo de arreglo push(), será utilizado principalmente para agregar un
+            // elemento o varios, al final de lo referenciado. 
+            //(e.d Generan como un Subconjunto)
+            if (typeof (item) == "string") {
+                arrayTexto.push(item);
+            } else if (typeof (item) == "boolean") {
+                arrayBolean.push(item);
+            } else if (typeof (item) == "number") {
+                arrayNumero.push(item);
+            }
+            console.log(arrayTexto);
+            console.log(arrayBolean);
+            console.log(arrayNumero);
+        }
+//1. Acceder a los elementos mayores, es decir, texto mayor
+
+        if(arrayTexto[0].lenght>arrayTexto[1].lenght){
+            document.write("El texto mayor es: " + arrayTexto[0]+"<br>");
+        }else{
+            document.write("El texto mayor es: " + arrayTexto[1]+"<br>");
+        }
+
+//iteracion Buleana
+
+var resultadoTrue = false;
+var resultadoFalse = true;
+for(var item of arrayBolean){
+    resultadoTrue = resultadoTrue || item;
+    resultadoFalse = resultadoFalse && item;
+    console.log(item);
+    document.write("Resultado verdadero: "+ resultadoTrue + "<br>");
+    document.write("Resultado  falso: " + resultadoFalse + "<br>");
+}
+
+//Operaciones de Algebra en matrices
+
+var suma =0;
+var multiplicacion =1;
+for(var item of arrayNumero){
+    suma += item;
+    multiplicacion *= item;
+}
+document.write("Suma: " + suma +"<br>");
+document.write("Resta: " + (arrayNumero[0]-arrayNumero[1])+"<br>");
+document.write("Multiplicar: " + multiplicacion +"<br>");
+document.write("Dividir: " +(arrayNumero[0]/arrayNumero[1])+ "<br>");
+document.write("Resto: " + (arrayNumero[0] % arrayNumero[1])+"<br>");
+
+
+/*
+Ejercicio:
+partiendo del Array de frutas:
+1. sacar el primer elemento
+2. nº de elementos del Array
+3. ultimo elemento del Array
+*/
+
+var frutas =["Manzanas", "Platanos","Sandias", "Naranjas"];
+var primero=frutas[0];
+console.log(primero);
+console.log(frutas.length);
+var ultimo = frutas[frutas.length-1];
+console.log(ultimo);
+
+/*
+ACCIONES DINAMICAS EN ARRAYS
+
+a) Añadir elementos al Array
+*/
+var nuevaElemento = frutas.push("Melocotón");
+console.log(frutas);
+
+/*
+b)Eliminar ultimo elemento del Array
+*/
+var eliminar = frutas.pop()
+console.log(frutas);
+
+/*
+c)Añadir elemento al inicio del Array
+*/
+var inicioFruta = frutas.unshift("Fresas");
+console.log(frutas);
+
+/*
+d)Encontrar indice de un elemento
+*/
+var indice = frutas.indexOf("Platanos");
+console.log(indice);
+
+
+    </script>
+</body>
+
+</html>

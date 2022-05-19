@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+<body>
+    <!--
+        ------TEMPLATE STRING---------
+
+    En principio JavaScript, establecia:
+    a) Las cadenas de caracteres,(string), vienen definidas por comillas "" o ''.
+    b) Además no existe la posibilidad de insertar cualquier tipo de variable, dentro de la cadena.
+    c) las concatenaciones, son farragosas, ejemplo
+        var nombre ="Mario";
+        var edad = 32;
+        console.log("Hola, me llamo " + nombre + " y tengo " + edad + "años");
+
+Que nos ofrece en cuanto al desarrollo de las cadenas de caracteres(string):
+    a. Una nueva forma de refererenciar los strings , delimitado por el simbolo " ` "
+    b. podemos incluir nuevas lineas
+    c. Y un nuevo formato para la inclusion de variables dentro de los string, a través del 
+    simbolo $
+   -->
+   <script>
+       var nombre ="Toño";
+        var apellidos ="Cuadrado";
+        var edad=45;
+        document.write(`Hola me llamo: ${nombre} Mi apellido es:${apellidos} y tengo: ${edad}años <br>`);
+        document.write("Hola me llamo: "+ nombre+" " +", Mi apellido es: "+ apellidos+ " y tengo:  "+ edad+ "años" );
+   </script>
+
+</body>
+</html>

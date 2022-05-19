@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <!--
+-------------------MATRICES----------------------
+
+DEFINICIÓN=> Serán un conjunto de elementos, colocados de forma adyacenten en la memoria
+de manera que nos permitirán referirnos a ellos con un solo nombre común.
+Por otro una caracteristica importante, la descubriremos ya que no se pierde la 
+independencia de los mismos.Nos ayudará a agrupar datos para posteriormente recogerlos y
+guardarlos de manera ordenada. TODO ELEMENTO PERTENECIENTE A UNA MATRIZ(Array), lleva
+asociado un INDICE.[i]
+
+TIPOS=> 
+        1. Según la estabilidad de su tamaño
+        -Tendrá un tamaño fijo, son entendidas como matrices estaticas
+        -Pueden cambiar de tamaño, pueden pasar a dinámicas
+        2. Según sus dimensiones:
+        -Una sola dimension(Un grupo de elementos)
+        -Multidimensionl(Module Ts-Angular-).
+    
+**Recuerda: 
+         -La propiedad length de una matriz o un Array nos referenciará 
+el tamaño de la misma, es decir, nos informará del tamaño del Array.
+          -Una Caracteristica a destacar siempre empiezan numerandose por 
+            el 0
+        
+SINTNXIS=>
+        1. var miArray = new Array();
+        2. var miArray = new Array(3); Aqui se definen los elemento que tiene el Array
+        3. var miArray = new Array("elemento1", "elemento2", "elemento3");
+
+Ejemplo en su multiples variaciones:
+    -->
+    
+    <script>
+  
+    var numero = new Array(1,2,3,4,5,6,7);//Variable global
+ /*    Recorrido de un Array */
+        for(var a=0;a<numero.length;a++){
+            console.log(numero[a]);
+        }
+//Otra forma de Recorridod de Array
+for (var i in numero){
+    console.log(numero[i]);
+}
+//En definitiva; Recorrido de elementos
+//Refencia a su naturaleza del elemento y no a su valor
+
+for (var elemento in numero){
+    console.log(elemento);
+}
+//Recorrido mostrado en documento-pagina
+document.write("Array "+ numero+ "<br>");
+
+//METODOS (DEL OBJECT) Array: 
+//Referencia, estos metodos, actuan en la naturaleza del mismo Array, generando su modificación del Objeto-.
+
+//Array invertido
+document.write("Array invertido: " + numero.reverse() + "<br>");
+//Array ascendente
+document.write("Array ascendiente: "+ numero.sort()+ "<br>");
+//Array separados por "|"
+document.write("Array join: "+ numero.join("|")+"<br>");
+//Array de posicionamiento, del 3(inicio) al 6(parada)
+document.write("Array posiciones 3 al 6: " + numero.slice(3,6)+"<br>");
+//Array a partir de un indice
+document.write("Array a partir del indice 4 " + numero.slice(4) + "<br>");
+
+//Creamos otro Array
+var letras = ["a","b","c","d","e"];
+//Concatenaciones de Array
+
+document.write("Concatenacion de dos Arrays: " + numero.concat(letras)+"<br>");
+
+document.write("Concatenacion, sin propiedad conmutativa : " + letras.concat(numero)+"<br>" );
+
+
+    </script>
+
+</body>
+</html>

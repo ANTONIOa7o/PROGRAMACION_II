@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion EcmaScript</title>
+</head>
+<body>
+    <!--
+            -------------------ECMASCRIPT -----------------------
+    
+            Es y será el lenguaje que habitualmente utiliza JavaScript,en su versión mas ortodoxa.
+        Que caracteristicas principales encontramos en esta version de JavaScript:
+        1. Arrows('=>')
+        2. Clases
+        3. Template-String
+        4.Herencias
+        5.Declaracion de Variables
+   -->
+
+   <!--
+
+                                 -------FOR EACH-----
+    Es otro método dentro de los itenerantes (repeticiones o bucles..), con un matiz, sin devolver
+    una nueva matriz. lo que hace realmente es ejecutar la función por cada elemento del Array.
+    Esta iteración en un principio partia de la declaracion de 3 variables, con la siguiente sintanxis:
+    a) Valor(elemento)
+    b)Indice
+    c)Array
+
+    [Inicios]
+    varArray.forEach(funtion(elemento, indice, Array)){
+        metodos declarados(Sentencias,...);
+    }
+
+    [1º Evolucion]
+    varArray.forEach(function(elemento)){
+          metodos declarados(Sentencias,...);
+          console.log(elemento);
+    }
+
+    **[2º Evolucion]
+    varArray.forEach(elemento=>{console.log(elemento)
+    });
+    Ejemplo de 1º y 2º evolucion
+   -->
+<script>
+//Forma Tradicional
+
+var datos =[1,2,3,4,5,6,7,8];
+    for(var item of datos){
+        console.log(item);
+    }
+    //Recorrido Arrow
+
+    datos.forEach(item=>{console.log(item)
+    });
+
+/*
+------------------La sentencia return-----------------
+finaliza la ejecución de la función, y especificar un valor para ser devuelto.a quien llama la funcion
+Entendido como , si forzara una salida inmediata de la función en la que se encuentra. Y seguidamente se 
+puede utilizar para devolver un valor
+
+*/
+
+var otraFuncion = function(numero){
+    return numero +2
+}
+console.log(otraFuncion(6));
+
+</script>
+</body>
+</html>
