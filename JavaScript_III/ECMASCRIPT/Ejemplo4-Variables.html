@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <!--
+        -------------DECLARACION DE VARIABLES-----------
+    A) La declaracion de las variables, seguirán con su misma naturaleza(función).
+    Nos surgiran como apoyo dos variables: let y const.
+    B)Las variables definidas con los modificadores let y const, utilizarán como ventaja los 
+    bloques creadoa a partir de llaves,  como contenedores de ambito
+    C) Restringidas a su ambito.
+    -->
+    <script>
+        //Variables Globales vs Locales (let)
+            var i =0;
+            for(i=0;i<10;i++){
+               // let j = i
+                var j = i
+            }
+            document.write("Variable Global: "+ i +"<br>");
+            document.write("Variable local: "+j + "<br>");
+        /*
+        Constantes serán principalmente como -VALOR DE LECTURA- Una vez utilizadas con algún identificador
+        , esta variable en si, no podrá ser reasignada.
+        */
+       const texto ="Hola";//Ejemplo en momentos determinados numericos, será Pi
+       document.write(texto);
+       texto="Adios";
+    </script>
+</body>
+</html>

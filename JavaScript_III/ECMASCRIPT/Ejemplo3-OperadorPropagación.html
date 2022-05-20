@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador de Propagación</title>
+</head>
+<body>
+    <!--
+--------SPREAD-------------
+Este operador nos va a permitir una expresión sea extendida en situaciones donde la propia estructura 
+puede permitir o esperar multiples argumentos(Llamadas a funcion) o a multiples elementos(Arrays)
+Ejemplo:
+    -->
+
+    <script>
+        /*
+        Variable var agregar o var argumentos y presentacion de const y let
+        El simbolo para representar dicho operador de propagación son '...'
+        */
+        const agregar = (a,b)=>a+b;
+        let argumentos =[3,5];
+        console.log(agregar(...argumentos));
+        //Equivale: console.log(agregar(3,5));
+/*
+Spread dcon objetos definidos de manera literal
+*/
+var nombre = new Array('Juan','Pedro', 'Luis','Maria');
+document.write(nombre+"<br>");
+
+//Operador spread
+document.write(...nombre+"<br>");
+
+var otrosNombres =['Ismael','Rocio',...nombre,'Jorge'];
+document.write(otrosNombres+ "<br>");
+
+/*
+Concatenación que genera mas sencillez, dentro de un Array
+*/
+let cde =['c','d','e'];
+let letras=['a','b',...cde,'f','g','h'];
+console.log(letras);
+
+/*
+Otra forma de concatenar
+*/
+let ABC ={a:5,b:6,c:3};
+let abcd ={...ABC,d:7};
+//console.log(abcd);
+console.log(abcd.a)
+    </script>
+</body>
+</html>

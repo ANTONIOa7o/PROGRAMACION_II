@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argumentos</title>
+</head>
+<body>
+    <!--
+        -------PARAMETRO: rest---------
+
+        Definir argumentos ( donde podremos pasar multiples variables), lo tendremos en la funcion
+         
+    -->
+    <script>
+        function mostrarElementos(...muestra){
+            console.log(muestra);
+            console.log(muestra[0]);
+        }
+mostrarElementos(2,5,1);
+mostrarElementos(3);
+
+//Acercanos mas claramente a estructura de Array
+
+        function suma(...numeros){
+            let suma =0;
+            for(let num of numeros){
+                suma += num;
+            }
+            return suma;
+        }
+        console.log("Suma(5,7) "+ suma(5,7));
+        console.log("Suma(3,4,5,6) "+ suma(3,4,5,6));
+
+//Multiplicacion-
+
+        function multiplicacion(n1,n2,...n3){
+            let resultado=n1*n2
+            for(let num of n3){
+                resultado *= num;
+            }
+            return resultado;
+        }
+        console.log("Multiplicar(4,7,9,3,5,6,8): " + multiplicacion(4,7,9,3,5,6,8) );
+
+    </script>
+</body>
+</html>
