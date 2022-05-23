@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            width: 50%;
+       
+            background-color: lemonchiffon;
+        }
+    </style>
+</head>
+<body onload="dibujar()">
+    <canvas id="lienzo">
+        Su navegador no soporta HTML 5
+    </canvas>
+    <script>
+        function dibujar(){
+            // Obtener el objeto canvas
+            var canvas = document.getElementById("lienzo");
+
+            // Acceder a su contexto
+            var context = canvas.getContext('2d');
+
+            // Mostrar un texto relleno
+            context.fillStyle = "green";
+            context.font = "bold 25px Arial";
+            context.textAlign ="center";
+            context.fillText("Saludos!!!", 100,50);
+
+            // Mostrar un texto perfilado
+            context.strokeStyle = "blue";
+            context.strokeText("Saludos!!!", 200,100);
+        }
+    </script>
+</body>
+</html>

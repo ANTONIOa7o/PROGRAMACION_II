@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--
+    <canvas> se utiliza para dibujar gráficos usando secuencias de comandos (normalmente JavaScript)
+para completar.
+la etiqueta <canvas> es un contenedor gráfica, se debe utilizar una secuencia de comandos para dibujar
+ gráficos.
+Se Puede utilizar Canva dibujar trazados, cajas, círculos, los personajes y la adición de imágenes a 
+través de una variedad de métodos. 
+un elemento <canvas> es parecido al elemento <img>, con la diferencia que este no tiene los atributos
+     src y alt. 
+El elemento <canvas> tiene solo dos atributos - width y height. Ambos son opcionales y pueden ser
+     definidos usando propiedades DOM. 
+Cuando los atributos ancho y alto no estan especificados, el lienzo se inicializara con 300 pixels ancho
+ y 150 pixels de alto.
+El elemento puede ser arbitrariamente redimensionado por CSS, pero durante el renderizado la imagen es 
+escalada para ajustarse al tamaño de su layout. 
+     Si el tamaño del CSS no respeta el ratio del canvas inicial, este aparecerá distorsionado.
+-->
+    <style>
+        canvas{
+            width: 300px;
+            height: 150px;
+            background-color: lemonchiffon;
+        }
+    </style>
+<body onload="dibujar()">
+    <canvas id="lienzo">
+        Su navegador no soporta HTML 5
+    </canvas>
+    <script>
+        function dibujar(){
+            // Obtener el objeto canvas
+            var canvas = document.getElementById("lienzo");
+
+            // Acceder a su contexto
+            //getContext ( "2d") objeto es un objeto incorporado HTML5 tiene varios métodos para caminos de dibujo,
+            // cajas, círculos, los personajes y la adición de imágenes. 
+            var context = canvas.getContext('2d');
+
+            // Pintar un rectangulo rojo
+            //Definir un relleno 
+            context.fillStyle = "rgb(255,0,0)";
+            //fillRect (x, y, anchura,altura) método define un rectángulo relleno con el método actual.
+            context.fillRect(10,10,100,100);
+        }
+    </script>
+</body>
+</html>

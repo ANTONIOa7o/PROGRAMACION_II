@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        svg{
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        El elemento svg es un contenedor que define un nuevo sistema de coordenadas y viewport.
+         Es usado como el elemento más externo de cualquier documento SVG, pero también puede ser
+          usado para agregar un fragmento de un SVG dentro de un documento SVG o HTML.
+          
+        fill()
+    Dibuja una forma solida rellenando el área del trazo.
+    -->
+    <svg>
+        <circle r="80" cx="150" cy="100" style="fill: chartreuse;" stroke="blue" stroke-width="4" />
+    </svg>
+
+    <svg>
+        <ellipse cx="150" cy="100" rx="120" ry="70" 
+            style="stroke: magenta; stroke-width:4; fill: mediumpurple" />
+    </svg>
+</body>
+</html>
