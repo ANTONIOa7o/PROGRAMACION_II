@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Ejercicio</title>
+</head>
+<body onload="dibujar1(); dibujar2()">
+    <!--
+        Realizar un rectángulo, y Pentágono
+
+    -->
+    <canvas id="micanvas1"></canvas>
+    <canvas id="micanvas2"></canvas>
+    <script>
+function dibujar1(){
+    var canvas= document.getElementById('micanvas1');
+    /*
+    get.Context('2d'); Es definido como un objeto se incorpora a HTML5, definiendo varios metodos, nos ayuda
+    a realizar determinas figuras, cajas, circulos, 
+    */
+    var contexto = canvas.getContext('2d');
+    contexto.fillStyle ="rgb(250,0,0)";
+    contexto.fillRect(10,10,100,100);
+}
+
+function dibujar2(){
+    var canvas= document.getElementById('micanvas2');
+    var contexto = canvas.getContext('2d');
+ contexto.beginPath();
+//contexto.strokeStyle= "blue" solo la linea, llamando a contexto.stroke();
+ contexto.fillStyle ="blue";
+    contexto.moveTo(150,50);
+    contexto.lineTo(200,90);
+    contexto.lineTo(180,150);
+    contexto.lineTo(120,150);
+    contexto.lineTo(100,90);
+    contexto.closePath();
+
+    contexto.fill();
+    
+}
+    </script>
+</body>
+</html>
