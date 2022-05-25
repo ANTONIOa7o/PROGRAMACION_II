@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas Geométricas</title>
+</head>
+
+<body>
+    <svg>
+        <circle r="80" cx="150" cy="100" style="fill: chartreuse;" stroke="blue" stroke-width="4" />
+    </svg>
+    <svg>
+        <ellipse cx="150" cy="100" rx="120" ry="70" style="stroke:magenta; stroke: width 4px; fill:mediumpurple" />
+    </svg>
+    <svg>
+        <rect x="50" y="100" width="200" height="80" style="fill: coral" stroke="blue" stroke-width="4" />
+    </svg>
+    <svg>
+        <text id="estiloTexto" x="150" y="100">
+            <a href="http://www.elmundo.es">Texto de Ejemplo SVG</a>
+        </text>
+    </svg>
+    <style>
+        #estiloTexto {
+            stroke: violet;
+            fill: thistle;
+            stroke-width: 2;
+            font-family: 'Comic Sans', cursive;
+            font-weight: bold;
+            font-size: x-large;
+        }
+
+        svg {
+            width: 450px;
+            height: 300px;
+        }
+        polygon{
+            fill: peachpuff;
+        }
+    </style>
+    <svg>
+        <line x1="150" y1="50" x2="200" y2="90" style="stroke: blue ;stroke: width 1px; "  />
+        <line x1="200" y1="90" x2="180" y2="150" style="stroke: blue ;stroke: width 1px;" />
+        <line x1="180" y1="150" x2="120" y2="150" style="stroke: blue ;stroke: width 1px;" />
+        <line x1="120" y1="150" x2="100" y2="90" style="stroke: blue ;stroke: width 1px;" />
+        <line x1="100" y1="90" x2="150" y2="50" style="stroke: blue ;stroke: width 1px;"  />
+    </svg>
+    <svg>
+        <polygon points="175 40, 270 108, 233 216, 117 216,81 108"/>
+    </svg>
+</body>
+
+</html>
